@@ -4,7 +4,7 @@ class LineItem < ActiveRecord::Base
   belongs_to :item
 
   def item_subtotal
-    (item.price / 100.00) * quantity
+    item.price * quantity
   end
 
 end
