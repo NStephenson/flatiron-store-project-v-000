@@ -12,7 +12,4 @@ Rails.application.routes.draw do
 
   post 'carts/:id/checkout', to: 'carts#checkout', as: 'checkout'
 
-  post 'carts/add_item', to: 'carts#add_item', as: 'add_item'
-  post 'carts/subtract_item', to: 'carts#subtract_item', as: 'subtract_item'
-
 end

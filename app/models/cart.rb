@@ -10,7 +10,6 @@ class Cart < ActiveRecord::Base
   end
 
   def add_item(item_id)
-    # binding.pry
     if item_ids.include?(item_id.to_i)
       line_item = line_items.find_by(item_id)
       line_item.update(quantity: line_item.quantity + 1)
@@ -19,17 +18,5 @@ class Cart < ActiveRecord::Base
       line_items.build(item_id: item_id, quantity: 1)
     end
   end
-
-  def subtract_item(item_id)
-    if item_ids.include?(item_id) && line_item = cart.line_items.find_by(item_id: item_id)
-      if line_item.quantity == 1
-        line_item.delete
-      else
-        line_item.update(quantity: line_item.quantity - 1)
-        line_item
-      end
-    end
-  end
-
 
 end

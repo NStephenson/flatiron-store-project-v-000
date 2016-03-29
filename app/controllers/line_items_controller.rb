@@ -1,6 +1,5 @@
 class LineItemsController < ApplicationController
 
-
   def create
     if current_user.current_cart.nil?
       current_user.current_cart = current_user.carts.create
@@ -10,9 +9,8 @@ class LineItemsController < ApplicationController
     redirect_to cart_path(current_user.current_cart)
   end
 
-
   def update
-    binding.pry
+    
   end
 
 end

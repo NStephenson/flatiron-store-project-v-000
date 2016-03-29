@@ -4,7 +4,6 @@ class Item < ActiveRecord::Base
   has_many :carts, through: :line_items
   belongs_to :category
 
-
   def self.available_items
     self.all.where("inventory > 0")
   end

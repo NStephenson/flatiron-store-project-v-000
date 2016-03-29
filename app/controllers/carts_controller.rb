@@ -20,11 +20,4 @@ class CartsController < ApplicationController
     redirect_to cart_path(@cart)
   end
 
-
-  def subtract_item
-    current_user_cart.subtract_item(params[:item_id])
-    current_user_cart.save
-    redirect_to cart_path(current_user_cart)
-  end
-
 end
