@@ -1,22 +1,25 @@
-<nav class="">
-    <ul>
-        <li> <%= link_to "Store Home", store_path %> </li>
- 
+<nav class="navbar navbar-inverse">
+  <div class="fluid-container">
+      <div class="navbar-header">
+        <%= link_to "Store Home", store_path, class: 'navbar-brand' %>
+      </div>
+      <ul class="nav navbar-nav row">
         <!-- Not Logged in -->
         <% if !current_user %>
-          <li><%= link_to "Sign in", new_user_session_path %></li>
-          <li><%= link_to "Sign up", new_user_registration_path %></li>
+          <li class="col-xs-4"><%= link_to "Sign in", new_user_session_path %></li>
+          <li class="col-xs-4"><%= link_to "Sign up", new_user_registration_path %></li>
 
         <!-- Logged in -->
         <% else %>
 
           <% if !!current_user_cart %>
-            <li> <%= link_to "Cart", cart_path(current_user_cart) %></li>
+            <li class="col-xs-3"><%= link_to "Cart", cart_path(current_user_cart) %></li>
           <% end %>
 
-          <li> <%= "Signed in as #{current_user.email}" %></li>
-          <li><%= link_to "Sign out", destroy_user_session_path, method: 'delete' %></li>
+          <li class="col-xs-6"><a href=""> <%= "Signed in as #{current_user.email}" %></a></li>
+          <li class="col-xs-3"><%= link_to "Sign out", destroy_user_session_path, method: 'delete' %></li>
           
         <% end %>
-    </ul>
+      </ul>
+</div>
 </nav>

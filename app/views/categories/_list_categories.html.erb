@@ -1,0 +1,11 @@
+<h3><%= link_to "Categories", categories_path %></h3>
+<hr>
+
+<div class="row categories-list">
+  <ul>
+    <% @categories.each do |category| %>
+      <li class="col-sm-2 col-xs-4"><%= link_to category.title, category_path(category) %></li>
+    <% end %>
+  </ul>
+</div>
+<hr>

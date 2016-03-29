@@ -19,10 +19,6 @@
  */
 @import "bootstrap";
 /* Some Style from the Bootstrap Default Theme */
-body {
-  padding-top: 70px;
-  padding-bottom: 30px;
-}
 
 .theme-dropdown .dropdown-menu {
   position: static;
@@ -33,3 +29,68 @@ body {
 .theme-showcase > p > .btn {
   margin: 5px 0;
 }
+
+ul {
+  list-style-type: none;
+}
+
+.no-wrap * {
+  display: inline;
+  white-space: nowrap;
+}
+
+.navbar .navbar-nav li {
+  border-left: white 1px solid;
+}
+
+.navbar-nav a {
+  font-size: 1.3em;
+}
+
+input[type=submit] {
+  border-radius: 0.5em;
+}
+
+.navbar ul, .categories-list ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.categories-list li{
+  background-color: rgb(230, 230, 230);
+  border: black 1px solid;
+  border-radius: 0.2em;
+  min-height: 60px;
+  overflow: auto;
+  padding: 0.5em;
+}
+
+.categories-list a {
+  font-size: 1.2em;
+}
+
+.item-show {
+  color: rgb(75, 75, 75);
+}
+
+.item-show-price {
+  margin-left: 50px;
+}
+
+.subtotal, .total {
+  float: right;
+}
+
+.checkout-btn:hover {
+  border: 2px black solid;
+}
+
+.checkout-btn {
+  font-size: 1.5em;
+  background-color: rgb(211, 211, 211);
+  padding: 0.35em;
+  width: 200px;
+}
+
+
+
